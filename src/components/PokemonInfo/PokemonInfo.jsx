@@ -56,9 +56,9 @@
 //---------------------------------STATE MACHINE
 
 import { Component } from "react";
-import PokemonErrorView from "./PokemonErrorView";
-import PokemonDataView from "./PokemonDataView";
-import PokemonPendingView from "./PokemonPendingView";
+import PokemonErrorView from "../PokemonErrorView";
+import PokemonDataView from "../PokemonDataView";
+import PokemonPendingView from "../PokemonPendingView";
 
 export default class PokemonInfo extends Component {
 
@@ -97,9 +97,9 @@ export default class PokemonInfo extends Component {
         const { pokemon, error, status } = this.state;
         const { pokemonName } = this.props;
 
-        if (status === 'idle') {
-            return <p>Input pokemon's name</p>
-        }
+        // if (status === 'idle') {
+        //     return <p>Input pokemon's name</p>
+        // }
 
         if (status === 'pending') {
            return <PokemonPendingView pokemonName={pokemonName}/>

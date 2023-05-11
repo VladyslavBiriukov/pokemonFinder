@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { toast } from "react-toastify";
 import { ImSearch } from "react-icons/im";
+import css from './PokemonForm.module.css';
 
 
 
@@ -27,17 +28,23 @@ export default class PokemonForm extends Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSumbit}>
+            <form className={css.form} onSubmit={this.handleSumbit}>
+            
                 <input
+                    className={css.form__field}
                     type="text"
                     name="pokemonName"
                     value={this.state.pokemonName}
                     onChange={this.handleNameChange}
+                    placeholder="Input Pokemon's Name"
                 />
-                <button type="submit">
-                    <ImSearch/>
+
+                <button
+                    className={css.form__button}
+                    type="submit">
+                    <ImSearch />
                     Find
-                </button>   
+                </button>
             </form>
         );
     };

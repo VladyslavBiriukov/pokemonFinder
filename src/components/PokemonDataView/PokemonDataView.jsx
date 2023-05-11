@@ -1,6 +1,8 @@
-export default function PokemonDataView({pokemon: {sprites, name, stats}}) {
+import css from './PokemonDataView.module.css'
+
+export default function PokemonDataView({ pokemon: { sprites, name, stats } }) {
     return (
-        <div>
+        <div className={css.pokemonInfo}>
             <img
                 src={sprites.other['official-artwork'].front_default}
                 alt={name}
