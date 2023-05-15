@@ -19,3 +19,4 @@ export default function PokemonDataView({ pokemon: { sprites, name, stats } }) {
         </div>
     );
 }
+
